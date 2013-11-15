@@ -1,0 +1,6 @@
+<head>Your new Roomies!</head>
+
+<% @query.each do |query|%>
+  <%= query.first_name %>
+  <%= query.desired_rent %>
+<% end %>
