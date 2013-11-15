@@ -1,9 +1,17 @@
 RoomieFinder::Application.routes.draw do
+
+resources :roomies do
+  #collection do
+
+  #end
+end
+get '/search' => 'roomies#search'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'roomies#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

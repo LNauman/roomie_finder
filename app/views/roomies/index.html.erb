@@ -1,0 +1,12 @@
+<head>Search Roomies!</head>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<% @roomies.each do |roomie|%>
+  <%= roomie.first_name %>
+  <%= roomie.desired_rent %>
+<% end %>
